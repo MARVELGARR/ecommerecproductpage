@@ -5,13 +5,9 @@ export const TotalGoodsSlice = createSlice({
     initialState: {
         value: 0
     },
-    reducers :{
-        update : (state, action) =>{
-            state
-        }
-    }
+    reducers :{}
 
 })
 
-export const { update } = TotalGoodsSlice.actions
+
 export default TotalGoodsSlice.reducer

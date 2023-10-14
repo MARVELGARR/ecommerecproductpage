@@ -1,37 +1,25 @@
 import { useDispatch, useSelector } from "react-redux"
-import { removeCart } from "../../../redux/features/cartSlice"
-
-interface GoodsProps{
-    Goods : Array<{
-        company: string,
-        title: string,
-        description: string,
-        price: string,
-        previousPrice: string,
-        percentage: string,
-    }>
-}
-
-const CartStore: React.FC <GoodsProps> = ( ) =>{
 
 
-    const dispatch = useDispatch()
-    const items =  useSelector((state)=> state.carting.value)
-    const count =  useSelector((state)=> state.ammountter.value)
-    const totalPrice = []
+
+const CartStore: React.FC = () =>{
+
+    const goods = useSelector((state)=> state.carting.value)
 
     return (
-        <div>
-            {items.map((item)=>{
-                <div className="">
-                    <div className="">Cart</div>
+        <div className="h-fit p-2  bg-white">
+            <div className="text-green-200">Cart</div>
+            {goods.map((item)=>{
+                return(
                     <div className="">
-                        <div className="">{item.title}</div>
-                        <div className="">{item.price + count }</div>
+                        <div className="">
+                            <div className="">{item.title}</div>
+                            <div className="">{item.price}</div>
 
+                        </div>
+                        <div className=""></div>
                     </div>
-                    <div className=""></div>
-                </div>
+                )
             })}
         </div>
     )
