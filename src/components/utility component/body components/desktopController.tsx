@@ -1,6 +1,6 @@
 
 import { controller } from "../../../assets/util/data";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { increment, decrement } from "../../../redux/features/desktopSlider";
 // Assuming your Redux state has a "counter" property
 export type RootState = {
@@ -10,7 +10,7 @@ export type RootState = {
 const DesktopController : React.FC = () =>{
 
     const dispatch = useDispatch();
-    const count =  useSelector((state)=> state.Desktop.value)
+
     
 
     const handleClick = (index: number) =>{

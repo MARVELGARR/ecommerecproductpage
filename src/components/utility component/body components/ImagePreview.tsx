@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from "react-redux"
 import { select } from "../../../redux/features/desktopSlider"
 import { product } from "../../../assets/util/data"
 import { notViewing } from "../../../redux/features/viewModeSlice"
-import SliderController from "./sliderController"
 import DesktopController from "./desktopController"
 
 
