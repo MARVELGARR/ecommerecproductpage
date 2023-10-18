@@ -36,7 +36,7 @@ const Products : React.FC<productsProps> = ({product}) =>{
                         <div className=' text-gray-300 font-semibold line-through'>{item.previousPrice}</div>
                     </div>
                     <ProductAmmountContainer>
-                        <ProductAmmountCounter/>
+                        <ProductAmmountCounter data={item}/>
                     </ProductAmmountContainer>
                     <CartButton data={item}  />
                 </div>

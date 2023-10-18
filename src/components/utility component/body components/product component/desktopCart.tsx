@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
-import { addToCart } from "../../../redux/features/cartSlice"
+import { addToCart } from "../../../../redux/features/cartSlice"
 
-const CartButton: React.FC = ( { data } ) =>{
+const DesktopCart: React.FC = ( { data } ) =>{
 
     const dispatch = useDispatch()
     const items =  useSelector((state)=> state.carting.value)
@@ -26,4 +26,4 @@ const CartButton: React.FC = ( { data } ) =>{
     )
 }
 
-export default CartButton
+export default DesktopCart

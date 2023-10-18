@@ -7,14 +7,22 @@ export const counterSlice = createSlice({
   },
   reducers: {
     increment: state => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
-      state.value += 1
+      if(state.value > 2){
+        state.value = 0
+      }
+      else{
+
+        state.value += 1
+      }
     },
     decrement: state => {
-      state.value -= 1
+      if(state.value < 1){
+        state.value = 3
+      }
+      else{
+
+        state.value -= 1
+      }
     },
     incrementByAmount: (state, action) => {
       state.value += action.payload

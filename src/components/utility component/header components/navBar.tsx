@@ -15,7 +15,7 @@ const NavBar: React.FC<navBarProp> = ( {array, isOpen, setIsOpen }) =>{
     const { handleClick, active} =  useActive(0);
 
     return (
-        <nav className=" px-10  py-16 h-screen flex w-full  bg-white">
+        <nav className=" md:h-full md:px-0 md:py-0 px-10  py-16 h-screen flex w-full  bg-white">
             {isOpen &&(<div className="absolute cursor-pointer top-6 left-4" onClick={()=>setIsOpen(false)}><Images link="/images/icon-close.svg" alt="close"/></div>)}
             <ul className=" md:hidden flex flex-col gap-3 ">
                 {array.map((item, index)=>{
@@ -25,10 +25,14 @@ const NavBar: React.FC<navBarProp> = ( {array, isOpen, setIsOpen }) =>{
                 })}
 
             </ul>
-            <ul className=" hidden md:flex">
+            <ul className=" hidden pt-[21px] w-full z-40 gap-8 md:flex">
                 {array.map((item, index)=>{
                     return (
-                        <li onClick={()=>handleClick(index)} key={index} className={`text-black ${active == index ? "font-bold " : ""}`}>{item}</li>
+                        <li key={index} className=" relative">
+
+                            <div onClick={()=>handleClick(index)} className={`text-black ${active == index ? "font-bold " : ""}`}>{item}</div>
+                            <span className={` ${active == index ? " " : " hidden"} bottom-0 absolute w-full h-1 bg-orange-600`}></span>
+                        </li>
                     )
                 })}
 
