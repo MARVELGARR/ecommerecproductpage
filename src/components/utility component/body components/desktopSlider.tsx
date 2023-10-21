@@ -49,7 +49,7 @@ const DesktopSlider : React.FC = () =>{
                             <div className="flex gap-5">
                                 {item.images?.map((imageItems)=>{
                                     return(
-                                        <div onClick={()=>handleSelect(imageItems.id)} key={imageItems.id} className={`${dataId == parseInt(imageItems.id) ? " filter bg-orange-400 opacity-60 ring-2 ring-orange-600" : ""} rounded-lg`}>
+                                        <div onClick={()=>handleSelect(imageItems.id)} key={imageItems.id} className={` cursor-pointer ${dataId == parseInt(imageItems.id) ? " filter bg-orange-400 opacity-60 ring-2 ring-orange-600" : ""} rounded-lg`}>
                                             <img 
                                                 src={imageItems.src}
                                                 alt={imageItems.alt}

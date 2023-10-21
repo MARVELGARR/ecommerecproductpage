@@ -6,7 +6,7 @@ interface profileProps {
 
 const Profile: React.FC<profileProps> = ({children}) =>{
     return (
-        <div className="">{children}</div>
+        <div className=" cursor-pointer">{children}</div>
     )
 }
 export default Profile

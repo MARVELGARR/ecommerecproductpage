@@ -20,7 +20,7 @@ const NavBar: React.FC<navBarProp> = ( {array, isOpen, setIsOpen }) =>{
             <ul className=" md:hidden flex flex-col gap-3 ">
                 {array.map((item, index)=>{
                     return (
-                        <li onClick={()=>handleClick(index)} key={index} className={`text-black ${active == index ? "font-bold " : ""}`}>{item}</li>
+                        <li onClick={()=>handleClick(index)} key={index} className={`text-black cursor-pointer ${active == index ? "font-bold " : ""}`}>{item}</li>
                     )
                 })}
 
@@ -28,7 +28,7 @@ const NavBar: React.FC<navBarProp> = ( {array, isOpen, setIsOpen }) =>{
             <ul className=" hidden pt-[21px] w-full z-40 gap-8 md:flex">
                 {array.map((item, index)=>{
                     return (
-                        <li key={index} className=" relative">
+                        <li key={index} className="cursor-pointer relative">
 
                             <div onClick={()=>handleClick(index)} className={`text-black ${active == index ? "font-bold " : ""}`}>{item}</div>
                             <span className={` ${active == index ? " " : " hidden"} bottom-0 absolute w-full h-1 bg-orange-600`}></span>

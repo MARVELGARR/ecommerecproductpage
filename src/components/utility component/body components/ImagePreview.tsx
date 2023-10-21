@@ -36,7 +36,7 @@ const ImagePreview: React.FC = () =>{
                                                 <img
                                                     src='/images/icon-close.svg'
                                                     alt="close preview"
-                                                    className="  w-5 h-5 stroke-orange-5 "
+                                                    className="cursor-pointer w-5 h-5 stroke-orange-5 "
                                                 />
                                             </div>
                                             <DesktopController/>
@@ -47,7 +47,7 @@ const ImagePreview: React.FC = () =>{
                             <div className="flex gap-5">
                                 {item.images?.map((imageItems)=>{
                                     return(
-                                        <div onClick={()=>handleSelect(imageItems.id)} key={imageItems.id} className={`${data == parseInt(imageItems.id) ? " filter bg-orange-400 opacity-60 ring-2 ring-orange-600" : ""} rounded-lg`}>
+                                        <div onClick={()=>handleSelect(imageItems.id)} key={imageItems.id} className={` cursor-pointer ${data == parseInt(imageItems.id) ? " filter bg-orange-400 opacity-60 ring-2 ring-orange-600" : ""} rounded-lg`}>
                                             <img 
                                                 src={imageItems.src}
                                                 alt={imageItems.alt}

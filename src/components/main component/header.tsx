@@ -30,7 +30,7 @@ const Header : React.FC = () =>{
             </div>
             <div className="flex item gap-2">
 
-                <div className=" ">
+                <div className=" cursor-pointer">
                     <Cart />
                 </div>
                 <Profile>

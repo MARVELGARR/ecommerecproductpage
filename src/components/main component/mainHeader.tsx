@@ -26,7 +26,7 @@ const MainHeader: React.FC = () =>{
             </div>
             <div className="flex h-full items-center gap-2">
 
-                <div className="">
+                <div className=" cursor-pointer">
                     <Cart/>
                 </div>
                 <Profile>
