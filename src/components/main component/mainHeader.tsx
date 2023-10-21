@@ -14,7 +14,7 @@ const MainHeader: React.FC = () =>{
     const view = useAppSelector((state)=>state.View.value)
     const [isOpen, setIsOpen] = useState(false)
     return (
-        <div className={` ${ view ? " blur-sm ":""} flex h-full items-center w-full justify-between px-10`}>
+        <div className={` ${ view ? " blur-sm ":""}  flex h-full items-center w-full justify-between px-10`}>
             <div className='flex h-full pt-8 gap-12 items-center'>
 
                 <img 

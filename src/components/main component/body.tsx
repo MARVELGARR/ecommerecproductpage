@@ -18,7 +18,7 @@ const Body : React.FC= () =>{
     return (
         <div className=''>
 
-            <div className={` absolute inset-0 ${ view ? "":"hidden"} z-10 bg-black filter opacity-70`}></div>
+            <div className={` absolute inset-0 ${ view ? "":"hidden"} z-10 bg-gray-600 filter opacity-70`}></div>
             <div className="relative z-10">
                 <div className={`  md:hidden `}>
 
