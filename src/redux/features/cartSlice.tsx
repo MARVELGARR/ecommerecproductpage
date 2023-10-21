@@ -25,7 +25,7 @@ export const CartSlice = createSlice({
   reducers: {
     addToCart: (state, action)  => {
       const newTodo: newTodoProps = action.payload
-      const obj = state.value.find((item)=> item.id === newTodo.id)
+      const obj = state.value.find((item)=> item.id == newTodo.id)
       if(obj){
         return
       }

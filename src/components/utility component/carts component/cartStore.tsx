@@ -34,7 +34,7 @@ const CartStore: React.FC = () =>{
                             </div>
                             <div className="">
                                 <div className="">{item.title}</div>
-                                <div className="">{item.price} {' X'} {productCounter.find((items)=> items.id == item.id)?.count || 0} <span>${(parseInt(item.price.slice(1, -1)) * (productCounter.find((item)=> item)?.count || 0)).toString() }</span></div>
+                                <div className="">{item.price} {' X'} {productCounter.find((items)=> items.id == item.id)?.count || 0} <span>${(parseInt(item.price.slice(1, -1)) * (productCounter.find((items)=> items.id == item.id)?.count || 0)).toString() }</span></div>
 
                             </div>
                             <div onClick={()=> dispatch(removeCart(item))} className="">
