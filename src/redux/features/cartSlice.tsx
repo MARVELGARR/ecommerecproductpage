@@ -11,11 +11,17 @@ export interface newTodoProps{
   previousPrice: string;
   percentage: string;
 }
+
+export interface CartState{
+  value: newTodoProps[]
+}
+const initialState: CartState = {
+  value: [],
+};
+
 export const CartSlice = createSlice({
   name: 'Cart',
-  initialState: {
-    value: []
-  },
+  initialState,
   reducers: {
     addToCart: (state, action)  => {
       const newTodo: newTodoProps = action.payload

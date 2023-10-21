@@ -1,15 +1,16 @@
-import { useDispatch, useSelector, useStore } from "react-redux"
+import { useDispatch } from "react-redux"
 import { removeCart } from "../../../redux/features/cartSlice"
 import { newTodoProps } from "../../../redux/features/cartSlice"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
+import { useAppSelector } from "../../../redux/hooks"
 
 const CartStore: React.FC = () =>{
 
-    const goods = useSelector((state)=> state.carting.value)
+    const goods = useAppSelector((state)=> state.carting.value)
     
 
-    const productCounter = useSelector((state)=> state.ammountter.value || 0)
-    const data = useSelector((state)=> state.ammountter.value.map((item)=> item.data));
+    const productCounter = useAppSelector((state)=> state.ammountter.value || 0)
+    
     const dispatch = useDispatch()
         
     useEffect(()=>{
@@ -33,7 +34,7 @@ const CartStore: React.FC = () =>{
                             </div>
                             <div className="">
                                 <div className="">{item.title}</div>
-                                <div className="">{item.price} {' X'} {productCounter.find((items)=> items.id == item.id)?.count || 0} <span>${(parseInt(item.price.slice(1, -1) * productCounter.find((item)=> item)?.count || 0)).toString() }</span></div>
+                                <div className="">{item.price} {' X'} {productCounter.find((items)=> items.id == item.id)?.count || 0} <span>${(parseInt(item.price.slice(1, -1)) * (productCounter.find((item)=> item)?.count || 0)).toString() }</span></div>
 
                             </div>
                             <div onClick={()=> dispatch(removeCart(item))} className="">

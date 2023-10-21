@@ -1,12 +1,12 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { addToCart } from "../../../../redux/features/cartSlice"
+import { desktopProps } from "./desktop"
 
-const DesktopCart: React.FC = ( { data } ) =>{
+const DesktopCart: React.FC < {data : desktopProps}>  = ( { data } ) =>{
 
     const dispatch = useDispatch()
-    const items =  useSelector((state)=> state.carting.value)
     
-    const handleCart = (data: []) => {
+    const handleCart = (data: desktopProps) => {
         dispatch(addToCart(data))
     }
 

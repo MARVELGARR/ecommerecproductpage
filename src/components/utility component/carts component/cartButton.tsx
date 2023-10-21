@@ -1,12 +1,36 @@
-import { useDispatch, useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
 import { addToCart } from "../../../redux/features/cartSlice"
 
-const CartButton: React.FC = ( { data } ) =>{
+interface cartButtonProps{
+    id: string;
+    count: number;
+    src: string;
+    imageArray?: {
+        id: number;
+        src: string;
+        height: number;
+        width: number;
+        alt: string;
+    }[];
+    images: {
+        id: string;
+        src: string;
+        alt: string;
+    }[];
+    company: string;
+    title: string;
+    description: string;
+    price: string;
+    previousPrice: string;
+    percentage: string;
+}
+
+const CartButton: React.FC<{ data: cartButtonProps}> = ( { data } ) =>{
 
     const dispatch = useDispatch()
-    const items =  useSelector((state)=> state.carting.value)
+
     
-    const handleCart = (data: []) => {
+    const handleCart = (data : cartButtonProps) => {
         dispatch(addToCart(data))
     }
 

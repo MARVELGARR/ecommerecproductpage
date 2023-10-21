@@ -1,15 +1,16 @@
-import { useDispatch, useSelector } from "react-redux"
+
 import { select } from "../../../redux/features/desktopSlider"
 import { product } from "../../../assets/util/data"
 import { notViewing } from "../../../redux/features/viewModeSlice"
 import DesktopController from "./desktopController"
+import { useAppDispatch, useAppSelector } from "../../../redux/hooks"
 
 
 
 const ImagePreview: React.FC = () =>{
 
-    const dispatch = useDispatch()
-    const data = useSelector((state)=> state.Desktop.value)
+    const dispatch = useAppDispatch()
+    const data = useAppSelector((state)=> state.Desktop.value)
     const handleSelect = (id: string) =>{
         dispatch(select(id))
     }
@@ -46,7 +47,7 @@ const ImagePreview: React.FC = () =>{
                             <div className="flex gap-5">
                                 {item.images?.map((imageItems)=>{
                                     return(
-                                        <div onClick={()=>handleSelect(imageItems.id)} key={imageItems.id} className={`${data == imageItems.id ? " filter bg-orange-400 opacity-60 ring-2 ring-orange-600" : ""} rounded-lg`}>
+                                        <div onClick={()=>handleSelect(imageItems.id)} key={imageItems.id} className={`${data == parseInt(imageItems.id) ? " filter bg-orange-400 opacity-60 ring-2 ring-orange-600" : ""} rounded-lg`}>
                                             <img 
                                                 src={imageItems.src}
                                                 alt={imageItems.alt}

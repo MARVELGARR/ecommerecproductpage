@@ -4,17 +4,16 @@ import { imageArray } from "../../assets/util/data";
 import SliderController from "../utility component/body components/sliderController";
 import ProductContainer from "../utility component/body components/product component/productContainer";
 import Products from "../utility component/body components/product component/products";
-import { product } from "../../assets/util/data";
 import DesktopBodyContainer from "../utility component/body components/desktoBodyContainer";
 import DesktopSlider from "../utility component/body components/desktopSlider";
 import ImagePreview from "../utility component/body components/ImagePreview";
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useAppSelector } from "../../redux/hooks";
 
-const Body : React.FC = () =>{
 
-    const view = useSelector((state)=>state.View.value)
 
+const Body : React.FC= () =>{
+
+    const view = useAppSelector((state)=>state.View.value)
 
     return (
         <div className=''>
@@ -29,7 +28,7 @@ const Body : React.FC = () =>{
                     </MobileSliderContainer>
 
                     <ProductContainer>
-                        <Products product={product}/>
+                        <Products />
                     </ProductContainer>
                 </div>
                 <div className={`${ view ? " bg-gray-400 opacity-80":""} hidden md:flex`}>

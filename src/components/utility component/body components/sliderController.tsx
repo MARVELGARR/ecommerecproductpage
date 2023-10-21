@@ -1,11 +1,11 @@
 
 import { controller } from "../../../assets/util/data";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { increment, decrement } from "../../../redux/features/imageSliderSlice";
 // Assuming your Redux state has a "counter" property
 export type RootState = {
     counter: number; // Replace with your actual state structure
-  };
+};
   
 const SliderController : React.FC = () =>{
 

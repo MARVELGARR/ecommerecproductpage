@@ -1,7 +1,6 @@
 
 import React from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "./sliderController";
+import { useAppSelector } from "../../../redux/hooks";
 
 
 interface mobileImageSliderProps {
@@ -16,7 +15,7 @@ interface mobileImageSliderProps {
 
 const MobileImageSlider : React.FC<mobileImageSliderProps> = ({ imageArray }) =>{
 
-    const count = useSelector((state: RootState) => state.counter.value)
+    const count = useAppSelector((state) => state.counter.value)
 
 
     return (

@@ -2,11 +2,36 @@
 import ProductAmmountContainer from "./product ammount/productAmmountContainer"
 
 import DesktopCounter from "./desktopCounter"
-import DesktopCart from "./desktopCart"
+import DesktopCart from './desktopCart';
 
 
+export interface desktopProps{
+    id: string,
+    count: number,
+    src: string,
+    imageArray: {
+        id: number,
+        src: string,
+        height: number,
+        width: number,
+        alt: string,
+    }[],
+    images: {
+        id: string,
+        src: string,
+        alt: string,
+    }[];
+    company: string,
+    title: string,
+    description: string,
+    price: string,
+    previousPrice: string,
+    percentage: string,
+    
+}
 
-const DesktopProduct : React.FC = ({ data }) =>{
+
+const DesktopProduct : React.FC<{ data: desktopProps}> = ( { data }) =>{
 
     return (
         <div className="flex flex-col py-5 mt-3">

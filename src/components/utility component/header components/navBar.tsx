@@ -6,7 +6,7 @@ interface navBarProp{
     array: string[]
     index?: number;
     isOpen?: boolean;
-    setIsOpen: (value: boolean)=>void;
+    setIsOpen: (value: boolean) => void;
 }
 
 

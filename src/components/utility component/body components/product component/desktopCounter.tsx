@@ -1,13 +1,19 @@
 
-import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "../../../../redux/features/productAmmountSlice";
+import { useAppDispatch, useAppSelector } from "../../../../redux/hooks";
+
+interface desktopCounterProps{
+    id: string,
+    count: number,
+
+}
 
 
 
-const DesktopCounter: React.FC = ({ data }) =>{
+const DesktopCounter: React.FC<{ data: desktopCounterProps}> = ({ data }) =>{
 
-    const dispatch = useDispatch();
-    const productCounter = useSelector((state)=> state.ammountter.value || 0)
+    const dispatch = useAppDispatch();
+    const productCounter = useAppSelector((state)=> state.ammountter.value || 0)
 
     return(
         <div className="flex lg:h-16 items-center justify-between w-full ">

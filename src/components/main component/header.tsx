@@ -5,7 +5,7 @@ import Images from "../utility component/header components/logo"
 import { useState } from "react"
 import Cart from "../utility component/header components/cart"
 import Profile from "../utility component/header components/profile"
-import {  useSelector} from "react-redux"
+
 
 
 const Header : React.FC = () =>{

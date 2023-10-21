@@ -1,22 +1,11 @@
-import { useDispatch, useSelector } from "react-redux"
+
 import CartButton from "../../carts component/cartButton"
 import ProductAmmountContainer from "./product ammount/productAmmountContainer"
 import ProductAmmountCounter from "./product ammount/productCounter"
-import { addToCart } from "../../../../redux/features/cartSlice"
+import { product } from "../../../../assets/util/data"
 
 
-export interface productsProps{
-    product : Array<{
-        company: string,
-        title: string,
-        description: string,
-        price: string,
-        previousPrice: string,
-        percentage: string,
-    }>
-}
-
-const Products : React.FC<productsProps> = ({product}) =>{
+const Products : React.FC = () =>{
 
     
 

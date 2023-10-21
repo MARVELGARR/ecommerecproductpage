@@ -1,6 +1,7 @@
 
 import { createSlice } from "@reduxjs/toolkit";
 
+
 export const DesktopSlice = createSlice({
     name: "Desktops",
     initialState : {
@@ -33,6 +34,7 @@ export const DesktopSlice = createSlice({
     }
 })
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const { select, increment, decrement } =  DesktopSlice.actions
 
 export default DesktopSlice.reducer

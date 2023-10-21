@@ -1,13 +1,24 @@
 
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { increment, decrement } from "../../../../../redux/features/productAmmountSlice";
+import { useAppSelector } from "../../../../../redux/hooks";
+
+interface ProductAmmountCounterProps{
+    id: string,
+    company: string,
+    title: string,
+    description: string,
+    price: string,
+    previousPrice: string,
+    percentage: string,
+    count: number,
+}
 
 
-
-const ProductAmmountCounter: React.FC = ({ data }) =>{
+const ProductAmmountCounter: React.FC<{data : ProductAmmountCounterProps}> = ({ data }) =>{
 
     const dispatch = useDispatch();
-    const productCounter = useSelector((state)=> state.ammountter.value || 0)
+    const productCounter = useAppSelector((state)=> state.ammountter.value || 0)
 
     return(
         <div className="flex items-center justify-between w-full ">

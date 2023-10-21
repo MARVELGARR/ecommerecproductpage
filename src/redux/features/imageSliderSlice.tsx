@@ -1,10 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+interface countState{
+  value: number
+}
+
 export const counterSlice = createSlice({
   name: 'counter',
   initialState: {
     value: 0
-  },
+  } as countState,
   reducers: {
     increment: state => {
       if(state.value > 2){

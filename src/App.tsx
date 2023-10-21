@@ -1,8 +1,8 @@
 import './App.css'
 import Body from './components/main component/body'
 import Header from './components/main component/header'
-import { Provider, useSelector } from 'react-redux'
-import store from './redux/store'
+import { Provider } from 'react-redux'
+import { store } from './redux/store'
 import MainHeader from './components/main component/mainHeader'
 function App() {
 
