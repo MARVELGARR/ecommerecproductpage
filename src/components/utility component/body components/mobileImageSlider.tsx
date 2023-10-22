@@ -31,7 +31,7 @@ const MobileImageSlider : React.FC<mobileImageSliderProps> = ({ imageArray }) =>
                         height={image.height}
                         width={image.width}
                         alt={image.alt}
-                        className={` ${ count === index ? "" : "hidden" }  w-full bg-cover`}
+                        className={` ${ count === index ? "" : "hidden" } h-[25rem] w-full object-cover`}
                     />
                 )
             })}

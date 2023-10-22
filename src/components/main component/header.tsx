@@ -16,8 +16,8 @@ const Header : React.FC = () =>{
     
     
     return (
-        <div className={`  flex md:shadow-none  justify-between items-center p-3 h-18 shadow-sm shadow-slate-400`}>
-            <div className="flex items-center gap-2">
+        <div className={`  flex md:shadow-none  justify-between items-center p-3 h-20 shadow-sm shadow-slate-400`}>
+            <div className="flex items-center gap-4">
                 <div className=" md:hidden flex items-center">
                     { !isOpen && (<div className=" cursor-pointer" onClick={()=>setIsOpen(true)}><Images link="/images/icon-menu.svg" alt="menu"/></div>)}
                 </div>
@@ -28,7 +28,7 @@ const Header : React.FC = () =>{
 
                 </div>)}
             </div>
-            <div className="flex item gap-2">
+            <div className="flex item gap-4">
 
                 <div className=" cursor-pointer">
                     <Cart />
