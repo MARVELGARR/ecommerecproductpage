@@ -69,7 +69,7 @@ const Cart: React.FC<CartProps> = () => {
         <div></div>
       )}
       {isOpen ? (
-        <div className="absolute hidden md:block md:right-0 md:left- md:z-50 md:w-[20rem]  top-16">
+        <div className="absolute hidden md:block md:right-28 md:top-28  md:z-50 md:w-[20rem]  top-16">
           <CartStore />
         </div>
       ) : (

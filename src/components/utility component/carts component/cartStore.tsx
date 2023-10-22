@@ -25,6 +25,7 @@ const CartStore: React.FC = () =>{
                 {goods.map((item: newTodoProps , index: number)=>{
                     return(
                         <div key={index} className="flex justify-between item-center text-md mt-2">
+        
                             <div>
                                 <img 
                                     src={item.src}
@@ -48,6 +49,7 @@ const CartStore: React.FC = () =>{
                         </div>
                     )
                 })}
+                <div className="px-3 py-3 flex justify-center rounded-lg  bg-orange-700/100 filter brightness-[2] text-white"> Checkout </div>
             </div>):(
                 <div className=" flex justify-center items-center h-20">
                     Your Cart is empty
