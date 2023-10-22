@@ -51,7 +51,7 @@ const ImagePreview: React.FC = () =>{
                                             <img 
                                                 src={imageItems.src}
                                                 alt={imageItems.alt}
-                                                className=' filter brightness-110 rounded-lg  w-full h-14'
+                                                className=' filter brightness-110 rounded-lg  w-full md:h-18 xl:h-20 h-14'
                                             />
                                         </div>
                                     )

@@ -7,7 +7,7 @@ interface desktopBodyContainerProps{
 const DesktopBodyContainer : React.FC<desktopBodyContainerProps> = ({children}) =>{
     return (
 
-        <div className="w-full xl:justify-center xl:flex xl:px-16 lg:px-10 mt-20">{children}</div>
+        <div className="w-full xl:justify-center pb-40 xl:flex xl:px-16 lg:px-10 mt-20">{children}</div>
 
 
     )
