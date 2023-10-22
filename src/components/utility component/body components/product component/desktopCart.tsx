@@ -14,7 +14,7 @@ const DesktopCart: React.FC < {data : desktopProps}>  = ( { data } ) =>{
 
     return (
         <div>
-            <button onClick={()=>handleCart(data) } className=" w-full h-12 rounded-md flex bg-orange-700/100 filter brightness-[2]  items-center justify-center gap-3" type="button">
+            <button onClick={()=>handleCart(data) } className=" w-full h-12 xl:h-16 rounded-md flex bg-orange-700/100 filter brightness-[2]  items-center justify-center gap-3" type="button">
                 <img 
                     src="/images/icon-cart.svg"
                     alt="cart icon"

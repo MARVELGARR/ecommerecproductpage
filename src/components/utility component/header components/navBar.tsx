@@ -25,12 +25,12 @@ const NavBar: React.FC<navBarProp> = ( {array, isOpen, setIsOpen }) =>{
                 })}
 
             </ul>
-            <ul className=" hidden pt-[21px] w-full z-40 md:gap-3 lg:gap-5 xl:gap-6 md:flex">
+            <ul className=" hidden pt-[21px] md:pt-[27px] w-full z-40 md:gap-2 lg:gap-3 xl:gap-6 md:flex">
                 {array.map((item, index)=>{
                     return (
                         <li key={index} className="cursor-pointer relative">
 
-                            <div onClick={()=>handleClick(index)} className={`text-black md:text-xl lg:text-2xl ${active == index ? "font-bold " : ""}`}>{item}</div>
+                            <div onClick={()=>handleClick(index)} className={`text-black md:text-md lg:text-lg ${active == index ? "font-bold " : ""}`}>{item}</div>
                             <span className={` ${active == index ? " " : " hidden"} bottom-0 absolute w-full h-1 bg-orange-600`}></span>
                         </li>
                     )

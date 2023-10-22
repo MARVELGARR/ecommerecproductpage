@@ -16,7 +16,7 @@ const DesktopCounter: React.FC<{ data: desktopCounterProps}> = ({ data }) =>{
     const productCounter = useAppSelector((state)=> state.ammountter.value || 0)
 
     return(
-        <div className="flex lg:h-16 items-center justify-between w-full ">
+        <div className="flex h-full items-center justify-between w-full ">
             <button onClick={()=>dispatch(decrement(data))} type="button" className=" ">
                 <img 
                     src='/images/icon-minus.svg'

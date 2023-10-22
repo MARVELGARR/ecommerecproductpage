@@ -13,7 +13,7 @@ const DesktopSlider : React.FC = () =>{
 
     const dispatch = useDispatch()
     const dataId = useAppSelector((state)=> state.Desktop.value || 0)
-    const view = useAppSelector((state)=>state.View.value)
+    
 
 
 
@@ -26,41 +26,41 @@ const DesktopSlider : React.FC = () =>{
     }
 
     return (
-        <div className="">
+        <div className=" ">
             {product.slice(0,-1).map((item)=>{
                 return (
-                    <div key={item.id} className=" flex justify-between gap-14">
+                    <div key={item.id} className="xl:gap-28 flex justify-between gap-14 ">
 
-                        <div  className=" min-w-[330px]  flex flex-col gap-3">
-                            <div className="">
+                        <div  className=" w-full min-w-[330px] 2xl:max-w-[32rem]  flex  flex-col gap-3">
+                            <div className="  flex-grow">
                                 {item?.imageArray?.map((image)=>{
                                     return (
-                                        <div onClick={handeleView} key={image.id} className={` ${ dataId == image.id ? "" : "hidden" }`}>
+                                        <div onClick={handeleView} key={image.id} className={` w-full ${ dataId == image.id ? "" : "hidden" }`}>
 
                                             <img 
                                                 src={image.src}
                                                 alt={image.alt}
-                                                className={`${ view ? " blur-sm opacity-80":""} flex max-w-full h-[22rem] rounded-xl`}
+                                                className={` w-full 2xl:max-h-[38rem]  xl:max-h-[24rem] md:h-[22rem] lg:h-full xl:h-full  object-cover  flex rounded-xl`}
                                             />
                                         </div>
                                     )
                                 })}
                             </div>
-                            <div className="flex gap-5">
+                            <div className="flex w-full xl:h-20 2xl:h-24 lg:h-16 md:h-16 justify-between gap-3">
                                 {item.images?.map((imageItems)=>{
                                     return(
-                                        <div onClick={()=>handleSelect(imageItems.id)} key={imageItems.id} className={` cursor-pointer ${dataId == parseInt(imageItems.id) ? " filter bg-orange-400 opacity-60 ring-2 ring-orange-600" : ""} rounded-lg`}>
+                                        <div onClick={()=>handleSelect(imageItems.id)} key={imageItems.id} className={` w-full flex flex-grow cursor-pointer ${dataId == parseInt(imageItems.id) ? " filter bg-orange-400 opacity-60 ring-2 ring-orange-600" : ""} rounded-lg`}>
                                             <img 
                                                 src={imageItems.src}
                                                 alt={imageItems.alt}
-                                                className={` ${ view ? " blur-sm opacity-80":""} rounded-lg w-16 h-14`}
+                                                className={` w-full h-full object-cover  rounded-lg `}
                                             />
                                         </div>
                                     )
                                 })}
                             </div>
                         </div>
-                        <div className={`${ view ? " blur-sm opacity-80":""} min-w-[230px] max-h-[200px]`}>
+                        <div className={`flex xl:mt-4 2xl:max-w-[25rem] 2xl:mt-20 flex-grow w-full  `}>
                             <DesktopProduct data={item} />
                         </div>
                     </div>

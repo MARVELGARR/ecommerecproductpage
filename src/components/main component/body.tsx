@@ -18,8 +18,8 @@ const Body : React.FC= () =>{
     return (
         <div className=''>
 
-            <div className={` absolute inset-0 ${ view ? "":"hidden"} z-10 bg-gray-600 filter opacity-70`}></div>
-            <div className="relative z-10">
+            
+            <div className=" z-10">
                 <div className={`  md:hidden `}>
 
                     <MobileSliderContainer>
@@ -31,12 +31,12 @@ const Body : React.FC= () =>{
                         <Products />
                     </ProductContainer>
                 </div>
-                <div className={`${ view ? " bg-gray-400 opacity-80":""} hidden md:flex`}>
+                <div className={` px-5  hidden md:flex`}>
                     <DesktopBodyContainer>
                         <DesktopSlider/>
                     </DesktopBodyContainer>
                 </div>
-                <div className="absolute z-30 top-10 right-60">
+                <div className={`absolute  flex justify-center items-center  filter  w-full z-50 top-0 right-0 bottom-0 `}>
 
                     { view &&(<ImagePreview/>)}
                 </div>

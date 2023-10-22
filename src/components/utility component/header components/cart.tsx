@@ -52,7 +52,7 @@ const Cart: React.FC<CartProps> = () => {
     <div>
       <div className="relative">
         <div onClick={() => dispatch(switching())}>
-          <img className="lg:w-12 lg:h-12 md:w-10 md:h-10 w-8 h-8" src="/images/icon-cart.svg" alt="cart" />
+          <img className="lg:w-8 lg:h-8 md:w-8 md:h-7 w-5 h-8" src="/images/icon-cart.svg" alt="cart" />
         </div>
 
         {z > 0 && cartItems.length > 0 && (
