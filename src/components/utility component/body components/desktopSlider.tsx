@@ -32,7 +32,7 @@ const DesktopSlider : React.FC = () =>{
                     <div key={item.id} className="xl:gap-28 flex justify-between gap-14 ">
 
                         <div  className=" w-full min-w-[330px] 2xl:max-w-[32rem]  flex  flex-col gap-3">
-                            <div className="  flex-grow">
+                            <div className="  flex-grow cursor-pointer">
                                 {item?.imageArray?.map((image)=>{
                                     return (
                                         <div onClick={handeleView} key={image.id} className={` w-full ${ dataId == image.id ? "" : "hidden" }`}>
