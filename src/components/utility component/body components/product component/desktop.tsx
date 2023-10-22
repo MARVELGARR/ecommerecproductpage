@@ -34,7 +34,7 @@ export interface desktopProps{
 const DesktopProduct : React.FC<{ data: desktopProps}> = ( { data }) =>{
 
     return (
-        <div className="flex flex-col py-5 mt-3">
+        <div className="flex full flex-col py-5 mt-3">
             <div className=" text-orange-600 text-lg font-bold">{data?.company}</div>
             <div className=" text-3xl font-bold pt-2">{data?.title}</div>
             <div className="mt-2 text-lg leading-8">{data?.description}</div>
