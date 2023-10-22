@@ -11,16 +11,19 @@ function App() {
   return (
     <div className={`  relative text-[16px]`}>
       <Provider store={store}>
-        <div className={`md:hidden md:relative sticky bg-white z-20 top-0`}>
+        <div className="w-full md:px-20 xl:px-52 lg:px-32 md:flex md:flex-col  md:justify-center">
 
-          <Header/>
-        </div>
-        <div className=' h-28 w-screen md:flex hidden'>
-          <MainHeader/>
-        </div>
-        <div className=''>
+          <div className={`md:hidden md:relative sticky bg-white z-20 top-0`}>
 
-          <Body/>
+            <Header/>
+          </div>
+          <div className=' h-28 w-full md:flex hidden'>
+            <MainHeader/>
+          </div>
+          <div className=''>
+
+            <Body/>
+          </div>
         </div>
       </Provider>
     </div>

@@ -14,17 +14,17 @@ const MainHeader: React.FC = () =>{
     const view = useAppSelector((state)=>state.View.value)
     const [isOpen, setIsOpen] = useState(false)
     return (
-        <div className={` ${ view ? " blur-sm ":""}  flex h-full items-center w-full justify-between px-10`}>
-            <div className='flex h-full pt-8 gap-12 items-center'>
+        <div className={` ${ view ? " blur-sm ":""}  flex h-full items-center w-full justify-between border-b-gray-400 border-b-[1px]`}>
+            <div className='flex h-full pt-8 md:gap-5 lg:gap-10 items-center'>
 
                 <img 
                     src={Logo}
-                    className="w-28 cover h-5"
+                    className="md:w-24 lg:w-32 cover h-5"
                     alt="logo"
                 />
                 <NavBar array={arrays} isOpen={isOpen} setIsOpen={setIsOpen} />
             </div>
-            <div className="flex h-full items-center gap-2">
+            <div className="flex h-full items-center md:gap-2 lg:gap-4">
 
                 <div className=" cursor-pointer">
                     <Cart/>
@@ -34,7 +34,7 @@ const MainHeader: React.FC = () =>{
                         <img 
                             src={ProfilePic}
                             alt="profile pic"
-                            className=' rounded-full w-8 h-8'
+                            className=' rounded-full lg:w-16 lg:h-16 md:w-10 md:h-10'
                         />
                     </div>
                 </Profile>

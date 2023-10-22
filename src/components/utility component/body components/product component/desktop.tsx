@@ -34,11 +34,19 @@ export interface desktopProps{
 const DesktopProduct : React.FC<{ data: desktopProps}> = ( { data }) =>{
 
     return (
+<<<<<<< HEAD
         <div className="flex w-full flex-col gap-3 py-5 mt-3">
             <div className=" text-orange-600 text-xl flex-wrap flex lg:text-2xl 2xl:text-4xl  font-bold">{data?.company}</div>
             <div className=" text-3xl lg:text-4xl 2xl:text-6xl flex flex-wrap font-bold pt-2">{data?.title}</div>
             <div className="mt-2 text-lg lg:text-xl xl:text-2xl 2xl:text-2xl flex-wrap flex leading-8">{data?.description}</div>
             <div className="flex lg:flex-nowrap items-center gap-3">
+=======
+        <div className="flex full flex-col py-5 mt-3">
+            <div className=" text-orange-600 text-lg font-bold">{data?.company}</div>
+            <div className=" text-3xl font-bold pt-2">{data?.title}</div>
+            <div className="mt-2 text-lg leading-8">{data?.description}</div>
+            <div className="flex items-center gap-3">
+>>>>>>> 36f12fbf662bf7748e92f9804ef0ee4cd17e2ae7
 
                 <ProductAmmountContainer>
                     <DesktopCounter data={data}/>
