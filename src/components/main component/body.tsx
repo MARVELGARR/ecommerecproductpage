@@ -31,7 +31,7 @@ const Body : React.FC= () =>{
                         <Products />
                     </ProductContainer>
                 </div>
-                <div className={`${ view ? " bg-gray-400 opacity-80":""} hidden justify-center w-full md:flex`}>
+                <div className={`${ view ? " bg-gray-400 opacity-80":""} hidden md:flex`}>
                     <DesktopBodyContainer>
                         <DesktopSlider/>
                     </DesktopBodyContainer>
