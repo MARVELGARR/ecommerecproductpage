@@ -36,7 +36,7 @@ const Body : React.FC= () =>{
                         <DesktopSlider/>
                     </DesktopBodyContainer>
                 </div>
-                <div className={`absolute  flex justify-center items-center  filter  w-full z-50 top-0 right-0 bottom-0 `}>
+                <div className={` ${ view ? "" : " hidden" }absolute  flex justify-center items-center  filter  w-full z-50 top-0 right-0 bottom-0 `}>
 
                     { view &&(<ImagePreview/>)}
                 </div>
