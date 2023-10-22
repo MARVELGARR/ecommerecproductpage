@@ -16,7 +16,7 @@ const Header : React.FC = () =>{
     
     
     return (
-        <div className={`  flex md:shadow-none  justify-between items-center p-3 h-20 shadow-sm shadow-slate-400`}>
+        <div className={`  flex md:shadow-none w-full justify-between items-center p-3 h-20 shadow-sm shadow-slate-400`}>
             <div className="flex items-center gap-4">
                 <div className=" md:hidden flex items-center">
                     { !isOpen && (<div className=" cursor-pointer" onClick={()=>setIsOpen(true)}><Images link="/images/icon-menu.svg" alt="menu"/></div>)}
@@ -35,7 +35,7 @@ const Header : React.FC = () =>{
                 </div>
                 <Profile>
 
-                    <div className="w-6 h-6">
+                    <div className="w-8 h-8">
                         <Images  link="/images/image-avatar.png" alt="profile pic"/>
                     </div>
                 </Profile>
